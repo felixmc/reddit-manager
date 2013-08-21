@@ -1,0 +1,211 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html, body {
+	background: #cee3f8;
+	height: 100%;
+	font: 1em Sans-serif;
+}
+
+a:link, a:active, a:visited {
+	color: #369;
+	text-decoration: none;
+}
+
+#delete-area {
+	background: red;
+	width: 210px;
+	height: 40px;
+	position: fixed;
+	top: -40px;
+	left: 0;
+	z-index: 999;
+}
+
+#delete-area.on {
+	top: 0;
+}
+
+#delete-area:after {
+	content: "drag here to delete";
+	font-weight: bold;
+	color: #fff;
+	display: block;
+	padding-top: 12px;
+	text-align: center;
+	font-size: 14px;
+}
+
+#sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	box-shadow: inset -1px 0 0 0 #5f99cf;
+	overflow-y: scroll;
+}
+
+#content {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+#content iframe {
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+#sidebar section {
+	width: 150px;
+	margin: 20px auto;
+	background: #fff;
+	border: 1px solid #5f99cf;
+	padding: 5px 10px 32px;
+}
+
+#sidebar section h2 {
+	font-size: 20px;
+	cursor: move;
+}
+
+#sidebar section {
+	position: relative;
+}
+
+#sidebar section:active {
+	cursor: move;
+}
+
+#sidebar .links .collapse-button {
+	width: 18px;
+	height: 18px;
+	background: #eee;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 1px solid #5f99cf;
+	border-top: none;
+	border-right: none;
+	text-align: center;
+	cursor: pointer;
+}
+
+#sidebar .links.collapsed {
+	padding-bottom: 3px;
+}
+
+#sidebar .links .collapse-button:after {
+	content: "-";
+	color: #777;
+}
+
+#sidebar .links.collapsed .collapse-button:after {
+	content: "+";
+}
+
+#sidebar .links ul {
+	list-style-type: none;
+	min-height: 10px;
+}
+
+#sidebar .links.collapsed ul, #sidebar .links.collapsed form {
+	display: none;
+}
+
+#sidebar .links li {
+	margin-top: 5px;
+	cursor: n-resize;
+}
+
+#sidebar .links li:before {
+	content: "/r/";
+	color: #369;
+}
+
+#sidebar form {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	margin-top: 5px;
+}
+
+#sidebar form input[type=text] {
+	display: block;
+	outline: 0;
+	width: 90%;
+	margin: 0 auto;
+	border: 1px solid #bbb;
+}
+
+#sidebar .admin {
+	padding-top: 2px;
+}
+
+#sidebar .admin.delete {
+	background: red;
+	padding-top: 7px;
+	padding-bottom: 8px;
+}
+
+#sidebar .admin.delete:after {
+	content: "drag here to delete";
+	color: #fff;
+	font: bold 14px Sans-serif;
+}
+
+#sidebar .admin.delete form, #sidebar .admin.delete .icon-menu {
+	display: none;
+}
+
+#sidebar .icon-menu {
+	display: block;
+	min-height: 10px;
+}
+
+#sidebar .icon-menu:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#sidebar .icon-menu li {
+	list-style-type: none;
+	float: left;
+	width: 16px;
+	display: block;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+
+#sidebar .icon-menu li.right {
+	float: right;
+	margin-right: 0px;
+	margin-left: 10px;
+}
+
+/*******************************************************************************/
+
+body.imgur {
+	background: #121212;
+}
+
+.imgur a {
+	color: #4E76C9;
+}
+
+.imgur #sidebar section {
+	background: #2B2B2B;
+	border-color: #888;
+}
+
+.imgur #sidebar .collapse-button {
+	border-color: #888;
+	background: #ccc;	
+}
+
+.imgur input {
+	background: #ccc;
+}

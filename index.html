@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>reddit manager</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<link rel="stylesheet" type="text/css" href="main.css" />
+	<link rel='shortcut icon' href="http://www.redditstatic.com/favicon.ico" type="image/x-icon" />
+	<script type="text/javascript" src="https://raw.github.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js"></script>
+	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+	<script type="text/javascript" src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+</head>
+<body>
+	<aside id="sidebar">
+		<div id="delete-area"></div>
+		<section class="admin">
+			<ul class="icon-menu">
+				<li><a id="menu-home" href="http://reddit.com/" title="home" target="contentFrame"><img src="images/house.png" /></a></li>
+				<li class="right"><a id="menu-mode" href="#" title="switch to imgur mode"><img src="http://www.google.com/ig/c/favicons?domain=imgur.com" /></a></li>
+				<li class="right"><a id="menu-toggle" href="#" title="expand/contract all categories"><img src="images/toggle.png" /></a></li>
+			</ul>
+			<form id="categoryForm">
+				<input type="text" placeholder="add a new category" />
+			</form>
+		</section>
+	</aside>
+	<section id="content">
+		<iframe id="contentFrame" src="http://reddit.com/"></iframe>
+	</section>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
